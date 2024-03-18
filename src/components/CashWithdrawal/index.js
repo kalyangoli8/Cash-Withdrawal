@@ -1,6 +1,6 @@
 import {Component} from 'react'
 
-import DenominationItem from './DenominationItem'
+import DenominationItem from '../DenominationItem'
 
 import './index.css'
 
@@ -14,7 +14,7 @@ class CashWithdrawal extends Component {
   }
 
   render() {
-    const {denominationList} = this.props
+    const {denominationsList} = this.props
     const {balance} = this.state
     const name = 'Sarah Williams'
     const initial = name.slice(0, 1)
@@ -39,7 +39,7 @@ class CashWithdrawal extends Component {
           <p className="withdraw">Withdraw</p>
           <p className="choose-sum">CHOOSE SUM(IN RUPEES)</p>
           <ul className="denominations-list">
-            {denominationList -
+            {denominationsList -
               map(eachDenomination => (
                 <DenominationItem
                   key={eachDenomination.id}
